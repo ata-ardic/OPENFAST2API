@@ -1,3 +1,0 @@
-/home/ata/Documents/Cpp_API/OpenFAST2API/build/CMakeFiles/rebuild_cache.dir
-/home/ata/Documents/Cpp_API/OpenFAST2API/build/CMakeFiles/edit_cache.dir
-/home/ata/Documents/Cpp_API/OpenFAST2API/build/CMakeFiles/test_openfast.dir
