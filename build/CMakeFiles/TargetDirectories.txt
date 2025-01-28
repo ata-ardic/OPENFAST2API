@@ -1,3 +1,0 @@
-/home/inflows/Documents/OPENFAST2API/build/CMakeFiles/rebuild_cache.dir
-/home/inflows/Documents/OPENFAST2API/build/CMakeFiles/edit_cache.dir
-/home/inflows/Documents/OPENFAST2API/build/CMakeFiles/test_openfast.dir
