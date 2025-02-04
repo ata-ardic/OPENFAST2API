@@ -1,0 +1,34 @@
+# Global simulation parameters
+nTurbinesGlob: 1
+n_turbines_glob: 1        # ✅ REQUIRED: Number of turbines
+debug: True             # Enable debug outputs if set to true
+dry_run: False           # The simulation will not run if dryRun is set to true
+sim_start: init          # Flag indicating whether the simulation starts from scratch or restart
+                         # [init | trueRestart | restartDriverInitFAST]
+                         
+#coupling_mode: weak                         
+t_start: 0.0             # Start time of the simulation
+t_end: 30.0               # End time of the simulation; tEnd <= tMax.
+t_max: 30.0 
+dt_fast: 0.01      # Time step inside OpenFAST
+dt_driver: 0.02    # Time step for the C++ driver (must match `dt_fast`)
+n_substeps: 1            # Number of substeps per timestep of the glue-code
+set_exp_law_wind: false  # Set velocity at the the turbine using an exponential law profile.
+restart_freq: 3000          # ✅ REQUIRED: Restart frequency (must be > 0)
+
+
+# Turbine configuration
+Turbine0:
+
+  turbine_base_pos: [ 0.0, 0.0, 0.0 ]  # The position of the turbine base for actuator-line simulations
+
+  num_force_pts_blade: 0               # The number of actuator points along each blade for actuator-line simulations
+
+  num_force_pts_tower: 0               # The number of actuator points along the tower for actuator-line simulations.
+
+  restart_filename: ""           # The checkpoint file for this turbine when restarting a simulation
+
+  FAST_input_filename: "/home/inflows/Documents/OpenFAST/reg_tests/r-test/glue-codes/openfast/MinimalExample/Main.fst" # The FAST input file for this turbine
+
+  turb_id:  1                          # A unique turbine id for each turbine
+

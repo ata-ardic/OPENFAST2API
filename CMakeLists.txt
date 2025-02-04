@@ -1,27 +1,43 @@
-# Specify the minimum required version of CMake
 cmake_minimum_required(VERSION 3.16)
 
-# Set project name and the C++ standard (adjust as needed)
 project(runOPENFAST)
-set(CMAKE_CXX_STANDARD 17)  # Adjust to C++17 or other versions if needed
+set(CMAKE_CXX_STANDARD 17)
 
-# Include OpenFAST headers
-include_directories(
-    /home/ata/Documents/OpenFAST/build/your_install_path/include/
-    ${HDF5_INCLUDE_DIRS}  # Add HDF5 include directories as well
-)
-
-# Link directories for OpenFAST and HDF5
-link_directories(
-    /home/ata/Documents/OpenFAST/build/your_install_path/lib/
-)
-
-# Find and link HDF5
+# Find required dependencies
+find_package(MPI REQUIRED)
+find_package(yaml-cpp REQUIRED)
 find_package(HDF5 REQUIRED)
-include_directories(${HDF5_INCLUDE_DIRS})
 
-# Define the executable
-add_executable(test_openfast test_openfast.cpp)
+# Find libxml++ using pkg-config
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(LIBXMLPP REQUIRED libxml++-2.6)
 
-# Link OpenFAST and HDF5 libraries to the executable
-target_link_libraries(test_openfast openfastcpplib ${HDF5_LIBRARIES})
+# Include directories
+include_directories(
+    /home/inflows/Documents/OpenFAST/install/include/
+    ${HDF5_INCLUDE_DIRS}
+    ${MPI_INCLUDE_PATH}
+    ${LIBXMLPP_INCLUDE_DIRS}
+)
+
+# Link directories
+link_directories(
+    /home/inflows/Documents/OpenFAST/install/lib/
+)
+
+# Define source files
+set(SOURCES
+    test_openfast.cpp
+)
+
+# Define executable
+add_executable(test_openfast ${SOURCES})
+
+# Link necessary libraries
+target_link_libraries(test_openfast
+    openfastcpplib
+    ${HDF5_LIBRARIES}
+    yaml-cpp
+    ${MPI_LIBRARIES}
+    ${LIBXMLPP_LIBRARIES}
+)
