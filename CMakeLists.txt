@@ -14,7 +14,7 @@ pkg_check_modules(LIBXMLPP REQUIRED libxml++-2.6)
 
 # Include directories
 include_directories(
-    /home/inflows/Documents/OpenFAST/install/include/
+    /home/ata/Documents/OpenFAST/install/include/
     ${HDF5_INCLUDE_DIRS}
     ${MPI_INCLUDE_PATH}
     ${LIBXMLPP_INCLUDE_DIRS}
@@ -22,7 +22,7 @@ include_directories(
 
 # Link directories
 link_directories(
-    /home/inflows/Documents/OpenFAST/install/lib/
+    /home/ata/Documents/OpenFAST/install/lib/
 )
 
 # Define source files

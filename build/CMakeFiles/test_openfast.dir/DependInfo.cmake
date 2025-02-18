@@ -4,16 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/inflows/Documents/OPENFAST2API/test_openfast.cpp" "/home/inflows/Documents/OPENFAST2API/build/CMakeFiles/test_openfast.dir/test_openfast.cpp.o"
+  "/home/ata/Documents/Cpp_API/OpenFAST2API/test_openfast.cpp" "/home/ata/Documents/Cpp_API/OpenFAST2API/build/CMakeFiles/test_openfast.dir/test_openfast.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/inflows/Documents/OpenFAST/install/include"
+  "/home/ata/Documents/OpenFAST/install/include"
   "/usr/include/hdf5/serial"
-  "/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi"
-  "/usr/lib/x86_64-linux-gnu/openmpi/include"
   "/usr/include/libxml++-2.6"
   "/usr/lib/x86_64-linux-gnu/libxml++-2.6/include"
   "/usr/include/libxml2"

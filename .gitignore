@@ -1,0 +1,18 @@
+# Ignore build directories
+/build/
+/CMakeFiles/
+*.o
+*.out
+*.bin
+
+# Ignore generated files
+*.log
+*.cmake
+*.dir/
+
+# Ignore executables
+/test_openfast
+
+# Ignore IDE/project files
+.vscode/
+.idea/

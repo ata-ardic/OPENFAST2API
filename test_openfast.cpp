@@ -180,8 +180,9 @@ int main(int argc, char** argv) {
     int iErr;
     int nProcs;
     int rank;
-    std::vector<double> torque (3, 0.0);
-    std::vector<double> thrust (3, 0.0);
+    std::vector<double> dis (3, 1.0);
+    std::cout << "initial_value = " << dis[0] << " " << dis[1] << " " << dis[2] << std::endl ;
+
 
     iErr = MPI_Init(NULL, NULL);
     iErr = MPI_Comm_size( MPI_COMM_WORLD, &nProcs);
@@ -196,6 +197,7 @@ int main(int argc, char** argv) {
     bool setUniformXBladeForces; // Set uniform X blade forces on all blade nodes
     int nIter;
     double xBladeForce = 0.0;
+    
 
     std::string cDriverInputFile=argv[1];
     fast::OpenFAST FAST;
@@ -264,10 +266,11 @@ int main(int argc, char** argv) {
             FAST.advance_to_next_driver_time_step();
         }
         if (FAST.isDebug()) {
-            FAST.computeTorqueThrust(0,torque,thrust);
+            FAST.updatePlatformDisplacement();
+            FAST.getPlatformDisplacement(dis);
             std::cout.precision(16);
-            std::cout << "Torque = " << torque[0] << " " << torque[1] << " " << torque[2] << std::endl ;
-            std::cout << "Thrust = " << thrust[0] << " " << thrust[1] << " " << thrust[2] << std::endl ;
+            std::cout << "Actual_Placement = " << dis[0] << " " << dis[1] << " " << dis[2] << std::endl ;
+
         }
     }
 

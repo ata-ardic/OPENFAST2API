@@ -44,10 +44,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/inflows/Documents/OPENFAST2API
+CMAKE_SOURCE_DIR = /home/ata/Documents/Cpp_API/OpenFAST2API
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/inflows/Documents/OPENFAST2API/build
+CMAKE_BINARY_DIR = /home/ata/Documents/Cpp_API/OpenFAST2API/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -74,14 +74,14 @@ clean: CMakeFiles/test_openfast.dir/clean
 CMakeFiles/test_openfast.dir/all:
 	$(MAKE) -f CMakeFiles/test_openfast.dir/build.make CMakeFiles/test_openfast.dir/depend
 	$(MAKE) -f CMakeFiles/test_openfast.dir/build.make CMakeFiles/test_openfast.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/inflows/Documents/OPENFAST2API/build/CMakeFiles --progress-num=1,2 "Built target test_openfast"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ata/Documents/Cpp_API/OpenFAST2API/build/CMakeFiles --progress-num=1,2 "Built target test_openfast"
 .PHONY : CMakeFiles/test_openfast.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_openfast.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/inflows/Documents/OPENFAST2API/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ata/Documents/Cpp_API/OpenFAST2API/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_openfast.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/inflows/Documents/OPENFAST2API/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ata/Documents/Cpp_API/OpenFAST2API/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_openfast.dir/rule
 
 # Convenience name for target.

@@ -1,4 +1,0 @@
-Commnad:
-
-g++ main.cpp -o runPython -I/usr/include/python3.8 -lpython3.8
-
